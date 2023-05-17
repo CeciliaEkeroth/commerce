@@ -1,0 +1,31 @@
+.hero {
+    text-align: center;
+    position: relative;
+}
+
+.hero img {
+    width: 95%;
+    height: 400px;
+    object-fit: cover;
+    margin: 30px 0 30px 0;
+}
+
+.hero h2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    font-size: 4rem;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: 0 2px 1px #2b2b2b, 
+      -1px 3px 1px #353535, 
+      -2px 5px 1px #515151;
+}
+
+.hero span {
+    background-color: #198497;
+    padding: 30px 40px 30px 40px;
+}
