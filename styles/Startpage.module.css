@@ -1,31 +1,152 @@
 .hero {
-    text-align: center;
-    position: relative;
+  text-align: center;
+  position: relative;
 }
 
 .hero img {
-    width: 95%;
-    height: 400px;
-    object-fit: cover;
-    margin: 30px 0 30px 0;
+  width: 95%;
+  height: 400px;
+  object-fit: cover;
+  margin: 30px 0 30px 0;
 }
 
 .hero h2 {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    width: 100%;
-    font-size: 4rem;
-    font-family: 'Staatliches', cursive;
-    letter-spacing: 3px;
-    color: white;
-    text-shadow: 0 2px 1px #2b2b2b, 
-      -1px 3px 1px #353535, 
-      -2px 5px 1px #515151;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+  font-size: 4rem;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 3px;
+  color: white;
+  text-shadow: 0 2px 1px #2b2b2b, -1px 3px 1px #353535, -2px 5px 1px #444444;
 }
 
 .hero span {
+  background-color: #198497;
+  padding: 30px 40px 30px 40px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.startpage h1 {
+    font-family: "Staatliches", cursive;
+    text-align: start;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.welcome {
+    position: relative;
+    width: 100%;
+    margin: 100px 10px 120px 30%;
+}
+
+.welcome p {
+    width: 40%;
+}
+
+.round {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #EC5D19;
+    top: 50%;
+  left: 20%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.welcome img {
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    top: 45%;
+  left: 80%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+
+
+.startpage h2 {
+    font-family: "Staatliches", cursive;
+    text-align: center;
+    padding: 30px 0 10px 0;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 1px #2b2b2b, -1px 3px 1px #353535, -2px 5px 1px #444444;
+    
+}
+
+.new {
+    background-image: linear-gradient(#16648A, #135576);
+    color: white;
+    padding-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: 20px auto 20px auto;
+    align-items: center;
+  align-content: center;
+  grid-gap: 10px;
+}
+
+.new img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 1px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.new h3 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.new p {
+    font-size: 1.2rem;
+}
+
+.email {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px 0 50px 0;
     background-color: #198497;
-    padding: 30px 40px 30px 40px;
+}
+
+.email h4 {
+    font-size: 2.2rem;
+    font-family: "Staatliches", cursive;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 0 2px 1px #2b2b2b, -1px 3px 1px #353535, -2px 5px 1px #444444;
+}
+
+.email input {
+    width: 28%;
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+    text-transform: uppercase;
+}
+
+.email button {
+    font-family: "Staatliches", cursive;
+    height: 40px;
+    width: 6%;
+    border: none;
+    background-color: #EC5D19;
+    color: white;
+    cursor: pointer;
 }

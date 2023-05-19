@@ -8,7 +8,7 @@ function header() {
   return (
     <>
     <div className={styles.header}>
-      <Image src={logo}/>
+      <Image src={logo} alt='company logo'/>
       <p>Home</p>
       <p>Products</p>
       <input type="text" placeholder="&#x1F50E;&#xFE0E; Search..." />

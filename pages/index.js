@@ -4,6 +4,7 @@ import Layout from './components/layout'
 import { createClient } from 'contentful'
 import { Inter } from 'next/font/google'
 import Hero from './components/Hero'
+import Startpage from './components/Startpage'
 import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -42,6 +43,7 @@ export default function Home({products, startpage}) {
       </Head>
       <Layout>
         <Hero startpage={startpage}/>
+        <Startpage startpage={startpage} products={products}/>
       </Layout>
     </>
   )

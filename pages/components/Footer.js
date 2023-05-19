@@ -46,7 +46,7 @@ function footer() {
         </div>
       </div>
       <div className={styles.copyright}>
-        <span>© COPYRIGHT</span>
+        <span>© COPYRIGHT CONSID COMMERCE</span>
       </div>
     </div>
   )

@@ -17,6 +17,11 @@
     margin: auto 10px auto 10px;
 }
 
+.header p:hover {
+    color: #EC5D19;
+    cursor: pointer;
+}
+
 .header input {
     margin: auto;
     margin-right: 0;
@@ -34,14 +39,12 @@
     right: 0;
 }
 
-
-
 /* FOOTER STYLING */
 .footer {
     background-color: rgb(67, 67, 67);
     color: white;
     margin-top: 0px;
-    padding: 10px;
+    padding: 30px 0 10px 0;
   }
   
   .footerInfo {
@@ -51,21 +54,24 @@
   }
   
   .footer p {
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 2px;
     font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
   }
   
   .footer li {
     list-style-type: none;
     font-size: 1.1rem;
+    margin-top: 5px;
     cursor: pointer;
     text-decoration: none;
     color: white;
   }
   
   .footer li:hover {
-    color: black;
+    color: #EC5D19;
   }
   
   .footer ul {
@@ -80,7 +86,7 @@
   .socialsIcons li {
     display: inline;
     font-size: 2rem;
-    margin: 0 10px 0 0;
+    margin: 0 15px 0 0;
   }
   
   .copyright {
