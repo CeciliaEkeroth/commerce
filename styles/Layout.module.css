@@ -5,6 +5,8 @@
     width: 100%;
     display: inline-flex;
     height: 70px;
+    position: fixed;
+    top: 0;
 }
 
 .header img {
@@ -12,7 +14,7 @@
     height: 70px;
 }
 
-.header p {
+.header a {
     font-size: 1.2rem;
     margin: auto 10px auto 10px;
 }
@@ -45,6 +47,8 @@
     color: white;
     margin-top: 0px;
     padding: 30px 0 10px 0;
+    position: absolute;
+    width: 100%;
   }
   
   .footerInfo {
