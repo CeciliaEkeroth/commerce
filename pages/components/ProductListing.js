@@ -1,26 +1,53 @@
-import React from 'react'
-import styles from '../../styles/ProductListing.module.css'
-import Link from 'next/link'
+import React from "react";
+import styles from "../../styles/ProductListing.module.css";
+import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { addToCart, getTotals } from "@/store/features/cartSlice";
+import { useSelector } from 'react-redux'
+import { useEffect } from "react";
 
-function ProductListing({products}) {
+import { BsCartPlus } from "react-icons/bs";
+
+function ProductListing({ products }) {
+  const dispatch = useDispatch();
+
+  const cart = useSelector((state) => state.cart);
+
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [cart, dispatch]);
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <div className={styles.grid}>
-        {products.map((product, i) => {
-            return(
-                <Link href={'/products/' + product.fields.slug} key={i}>
+      {products.map((product, i) => {
+        return (
+          <div key={i}>
+            <Link href={"/products/" + product.fields.slug}>
+              <img
+                src={"https://" + product.fields.productImage.fields.file.url}
+                alt=""
+              />
+            </Link>
+            <div className={styles.inline}>
+              <Link href={"/products/" + product.fields.slug}>
                 <div>
-                    <img src={
-                      "https://" + product.fields.productImage.fields.file.url
-                    } alt="" />
-                    <h2>{product.fields.name}</h2>
-                    <h3>{product.fields.price} kr</h3>
+                  <h2>{product.fields.name}</h2>
+                  <h3>{product.fields.price} kr</h3>
                 </div>
-                </Link>
-            )
-        })}
+              </Link>
+              <button onClick={() => handleAddToCart(product.fields)}>
+                <BsCartPlus />
+              </button>
+            </div>
+          </div>
+        );
+      })}
     </div>
-  )
+  );
 }
 
-export default ProductListing
+export default ProductListing;

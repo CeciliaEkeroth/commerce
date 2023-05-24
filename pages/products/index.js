@@ -3,6 +3,8 @@ import Layout from '../components/layout'
 import Sidebar from '../components/Sidebar'
 import ProductListing from '../components/ProductListing'
 import { createClient } from 'contentful'
+import styles from '../../styles/ProductListing.module.css'
+import { useRouter } from 'next/router'
 
 export async function getStaticProps(){
 
@@ -21,11 +23,18 @@ export async function getStaticProps(){
   }
 
 function index( {products} ) {
+
+  const router = useRouter();
+
+  const location = router.pathname
     
   return (
     <Layout>
-    <Sidebar products={products}/>
+    <Sidebar products={products} location={location}/>
+    <h1 className={styles.title}>Alla produkter</h1>
+    <div className={styles.listing}>
     <ProductListing products={products}/>
+    </div>
     </Layout>
   )
 }

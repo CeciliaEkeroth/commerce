@@ -1,7 +1,7 @@
-import React from 'react'
-import styles from '../../styles/ProductListing.module.css'
+import styles from "../../styles/ProductListing.module.css";
+import Link from "next/link";
 
-function Sidebar({products}) {
+function Sidebar({ products, location }) {
 
   const allCategories = [];
 
@@ -15,18 +15,34 @@ function Sidebar({products}) {
 
   let uniqueCategories = [...new Set(allCategories)];
 
+  const pageLocation = (path) => {
+    if(location === path){
+      return{
+      color: "#EC5D19"
+    }
+    } else {
+      return {
+      color: "black"
+    }
+    }
+  }
+
   return (
     <div className={styles.sidebar}>
-        <ul>
-            <li>All products</li>
-            {uniqueCategories.map((category, i) =>{
-                return (
-                    <li key={i}>{category}</li>
-                )
-            })}
-        </ul>
+      <ul>
+        <Link href="/products">
+          <li style={pageLocation("/products")}>Alla produkter</li>
+        </Link>
+        {uniqueCategories.map((category, i) => {
+          return (
+            <Link href={"/categories/" + category} key={i}>
+              <li style={pageLocation(category)}>{category}</li>
+            </Link>
+          );
+        })}
+      </ul>
     </div>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

@@ -20,7 +20,7 @@
   font-family: "Staatliches", cursive;
   letter-spacing: 3px;
   color: white;
-  text-shadow: 0 2px 1px #2b2b2b, -1px 3px 1px #353535, -2px 5px 1px #444444;
+  text-shadow: 0 2px 1px #000000, -1px 3px 1px #181818, -2px 5px 1px #131313;
 }
 
 .hero span {
@@ -31,122 +31,193 @@
 }
 
 .startpage h1 {
-    font-family: "Staatliches", cursive;
-    text-align: start;
-    font-size: 3rem;
-    margin-bottom: 40px;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 1px;
+  text-align: start;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: black;
 }
 
 .welcome {
-    position: relative;
-    width: 100%;
-    margin: 100px 10px 120px 30%;
+  width: 100%;
+  margin: 30px auto 40px 0;
+  padding: 40px 2% 40px 5%;
+  background-image: linear-gradient(#eeeeee, #eaeaea);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 600px;
+  grid-auto-flow: dense;
+}
+
+.welcomeItem {
+  grid-column: 1;
 }
 
 .welcome p {
-    width: 40%;
-}
-
-.round {
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: #EC5D19;
-    top: 50%;
-  left: 20%;
-  transform: translateY(-50%) translateX(-50%);
+  width: 90%;
 }
 
 .welcome img {
-    display: none;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    object-fit: cover;
-    top: 45%;
-  left: 80%;
-  transform: translateY(-50%) translateX(-50%);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  grid-column: 2;
 }
 
-
+.welcome button {
+  font-family: "Staatliches", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  height: 50px;
+  width: 30%;
+  margin-top: 30px;
+  color: white;
+  background-color: #ec5d19;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  cursor: pointer;
+}
 
 .startpage h2 {
-    font-family: "Staatliches", cursive;
-    text-align: center;
-    padding: 30px 0 10px 0;
-    font-size: 2.7rem;
-    letter-spacing: 2px;
-    text-shadow: 0 2px 1px #2b2b2b, -1px 3px 1px #353535, -2px 5px 1px #444444;
-    
+  font-family: "Staatliches", cursive;
+  text-align: center;
+  padding: 30px 0 10px 0;
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 1px #2b2b2b, -1px 3px 1px #353535, -2px 5px 1px #444444;
 }
 
 .new {
-    background-image: linear-gradient(#16648A, #135576);
-    color: white;
-    padding-bottom: 30px;
+  background-image: linear-gradient(#16648a, #135576);
+  color: white;
+  padding-bottom: 30px;
 }
 
 .grid {
-    display: grid;
-    width: 90%;
-    grid-template-columns: 25% 25% 25% 25%;
-    margin: 20px auto 20px auto;
-    align-items: center;
+  display: grid;
+  width: 90%;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: 20px auto 20px auto;
+  align-items: center;
   align-content: center;
   grid-gap: 10px;
 }
 
 .new img {
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    border-radius: 1px;
-    margin-bottom: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 1px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.new h3 {
-    font-size: 1.6rem;
-    margin-bottom: 5px;
+.inline h3 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
-.new p {
-    font-size: 1.2rem;
+.inline p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.inline {
+  display: inline-flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.inline button {
+  width: 12%;
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.inline button:hover {
+  color: #ec5d19;
 }
 
 .email {
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    padding: 30px 0 50px 0;
-    background-color: #198497;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px 0 50px 0;
+  background-color: #198497;
 }
 
 .email h4 {
-    font-size: 2.2rem;
-    font-family: "Staatliches", cursive;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    color: white;
-    text-shadow: 0 2px 1px #2b2b2b, -1px 3px 1px #353535, -2px 5px 1px #444444;
+  font-size: 2.2rem;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 0 2px 1px #2b2b2b, -1px 3px 1px #353535, -2px 5px 1px #444444;
 }
 
 .email input {
-    width: 28%;
-    height: 40px;
-    padding-left: 10px;
-    border: none;
-    text-transform: uppercase;
+  width: 28%;
+  height: 40px;
+  padding-left: 10px;
+  border: none;
+  text-transform: uppercase;
 }
 
 .email button {
-    font-family: "Staatliches", cursive;
+  font-family: "Staatliches", cursive;
+  height: 40px;
+  width: 6%;
+  border: none;
+  background-color: #ec5d19;
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero img {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .hero span {
+    padding: 10px 20px 10px 20px;
+  }
+
+  .welcome {
+    margin-top: 10px;
+    display: block;
+    padding: 20px;
+  }
+
+  .welcome h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .welcome p {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0 10px 0 10px;
+  }
+
+  .welcome button {
     height: 40px;
-    width: 6%;
-    border: none;
-    background-color: #EC5D19;
-    color: white;
-    cursor: pointer;
+    width: 40%;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
 }

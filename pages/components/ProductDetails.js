@@ -1,9 +1,17 @@
 import React from 'react'
 import styles from '../../styles/Productdetails.module.css'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '@/store/features/cartSlice';
 
 function ProductDetails(product) {
 
     const details = product.product
+
+    const dispatch = useDispatch();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+  }
 
   return (
     <div>
@@ -20,7 +28,7 @@ function ProductDetails(product) {
                 <option value="">L</option>
                 <option value="">XL</option>
             </select>
-            <button>Lägg i varukorgen</button>
+            <button onClick={() => handleAddToCart(details.fields)}>Lägg i varukorgen</button>
         </div>
     </div>
   )
