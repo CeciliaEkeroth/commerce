@@ -1,3 +1,4 @@
+/* Hero styling */
 .hero {
   text-align: center;
   position: relative;
@@ -30,6 +31,7 @@
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+/* Welcome part styling */
 .startpage h1 {
   font-family: "Staatliches", cursive;
   letter-spacing: 1px;
@@ -81,6 +83,7 @@
   cursor: pointer;
 }
 
+/* Recently added items styling */
 .startpage h2 {
   font-family: "Staatliches", cursive;
   text-align: center;
@@ -145,6 +148,7 @@
   color: #ec5d19;
 }
 
+/* Subscribe styling */
 .email {
   width: 100%;
   text-align: center;
@@ -180,10 +184,12 @@
   cursor: pointer;
 }
 
+/* Mobile viewing */
 @media only screen and (max-width: 600px) {
   .hero img {
     height: 200px;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
   
   .hero h2 {
@@ -196,6 +202,7 @@
 
   .welcome {
     margin-top: 10px;
+    margin-bottom: 20px;
     display: block;
     padding: 20px;
   }
@@ -219,5 +226,50 @@
     margin-top: 15px;
     margin-left: 10px;
     font-size: 1.3rem;
+  }
+
+  .new h2 {
+    font-size: 1.6rem;
+  }
+
+  .new img {
+    margin-bottom: 5px;
+  }
+
+  .grid {
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 20px;
+  }
+
+  .inline h3 {
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+
+  .inline p {
+    font-size: 0.7rem;
+  }
+
+  .inline button {
+    font-size: 1.4rem;
+    width: 16%;
+  }
+
+  .email {
+    padding: 20px 0 30px 0;
+    margin-top: 20px;
+  }
+
+  .email h4 {
+    font-size: 1.5rem;
+  }
+
+  .email input {
+    width: 65%;
+  }
+
+  .email button {
+    width: 20%;
+    font-size: 0.7rem;
   }
 }

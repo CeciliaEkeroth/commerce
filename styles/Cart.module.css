@@ -11,7 +11,7 @@
     width: 90%;
     margin: auto;
     height: 100%;
-    min-height: 700px;
+    min-height: 60vh;
 }
 
 .headings {
@@ -25,7 +25,7 @@
 
 .grid {
     display: grid;
-    width: 100;
+    width: 100%;
     grid-template-columns: 25% 25% 25% 25%;
     align-items: center;
     justify-items: center;
@@ -46,7 +46,7 @@
 .product {
     display: inline-flex;
     width: 100%;
-    justify-content: start;
+    justify-content: flex-start;
     padding-left: 50px;
 }
 
@@ -170,4 +170,62 @@
 .cartIcon {
     font-size: 8rem;
     color:#198497;
+}
+
+@media only screen and (max-width: 600px) {
+    .headings {
+        font-size: 1rem;
+    }
+
+    .grid {
+        margin-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .grid p {
+        font-size: 0.8rem;
+    }
+
+    .product {
+        padding-left: 10px;
+    }
+
+    .product div {
+        margin-left: 10px;
+    }
+
+    .product h3 {
+        font-size: 0.8rem;
+    }
+
+    .product button {
+        font-size: 0.5rem;
+    }
+    
+    .quantity button {
+        font-size: 1rem;
+    }
+    
+    .quantity p {
+        padding: 5px 10px 5px 10px;
+        margin: 0 10px 0 10px;
+    }
+
+    .clear button {
+        width: 60%;
+    }
+
+    .proceed h4 {
+        font-size: 1.5rem;
+    }
+
+    .proceed button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 15px 10px 15px 19px;
+    }
+
+    .proceed p {
+        font-size: 0.8rem;
+    }
 }

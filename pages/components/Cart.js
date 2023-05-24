@@ -8,9 +8,10 @@ import styles from "../../styles/Cart.module.css";
 import { useDispatch } from "react-redux";
 import { BsArrowLeft, BsCart3 } from "react-icons/bs";
 import Link from "next/link";
-import { useEffect } from "react";
 
 function cart({ cart }) {
+  
+  // Add functions to cart
   const dispatch = useDispatch();
 
   const handleRemove = (cartItem) => {
@@ -32,13 +33,13 @@ function cart({ cart }) {
   return (
     <>
       <div className={styles.cart}>
-        <h1>Shopping cart</h1>
+        <h1>Din Varukorg</h1>
         {cart.cartItems.length === 0 ? (
           <div className={styles.empty}>
-            <h2>Your shopping cart is currently empty</h2>
+            <h2>Din varukorg är för nuvarande tom</h2>
             <Link href="/products">
               <p>
-                <BsArrowLeft /> Go shopping
+                <BsArrowLeft /> Till shoppen
               </p>
             </Link>
             <div>
@@ -80,14 +81,16 @@ function cart({ cart }) {
             </div>
             <div className={styles.checkout}>
               <div className={styles.clear}>
-                <button onClick={() => handleClear()}>Clear cart</button>
+                <button onClick={() => handleClear()}>Rensa</button>
               </div>
               <div className={styles.proceed}>
                 <h4>Totalt: {cart.cartTotalAmount} kr</h4>
-              <Link href="/checkout">
-                <button>Proceed to checkout</button>
-              </Link>
-              <p><BsArrowLeft/> Continue shopping</p>
+                <Link href="/checkout">
+                  <button>Till Kassan</button>
+                </Link>
+                <p>
+                  <BsArrowLeft /> Fortsätt shoppa
+                </p>
               </div>
             </div>
           </div>

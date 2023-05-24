@@ -1,8 +1,21 @@
+.goBack {
+    padding-left: 65px;
+    margin-top: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(156, 156, 156);
+}
+
+.goBack:hover {
+    text-decoration: underline;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 50% 40%;
     grid-template-rows: 55px 50px 300px 50px 500px;
-    padding: 65px
+    padding: 65px;
+    padding-top: 20px;
 }
 
 .grid img {
@@ -48,5 +61,50 @@
 @media only screen and (max-width: 1700px) {
     .grid p {
         font-size: 1.15rem;
+    }
+}
+
+/* Mobile viewing */
+@media only screen and (max-width: 600px) {
+
+    .goBack {
+        padding-left: 30px;
+        margin-top: 30px;
+        font-size: 1rem;
+    }
+    .grid {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        padding: 15px 30px 30px 30px;
+    }
+
+    .grid img {
+        grid-row: 1;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .grid h1 {
+        font-size: 2rem;
+    }
+
+    .grid h2 {
+        font-size: 1.3rem;
+        padding-bottom: 15px;
+    }
+
+    .grid p {
+        font-size: 1rem;
+        padding-bottom: 15px;
+    }
+
+    .grid select {
+        height: 30px;
+    }
+
+    .grid button {
+        height: 40px;
+        margin-top: 10px;
+        font-size: 1.2rem;
     }
 }

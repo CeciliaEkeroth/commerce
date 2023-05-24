@@ -1,21 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// add functionality to the cart
+
 const initialState = {
-  cartItems: [
-    {
-      name: "test",
-      price: 399,
-      id: 15,
-      cartQuantity: 1,
-      productImage: {
-        fields: {
-          file: {
-            url: "placehold.co/400x600",
-          },
-        },
-      },
-    },
-  ],
+  cartItems: [],
   cartTotalQuantity: 0,
   cartTotalAmount: 0,
 };
@@ -54,29 +42,34 @@ const cartSlice = createSlice({
         );
         state.cartItems = nextCartItems;
       }
-    }, clearCart(state, action){
-        state.cartItems = [];
+    },
+    clearCart(state, action) {
+      state.cartItems = [];
     },
     getTotals(state, action) {
-        let {total, quantity} = state.cartItems.reduce((cartTotal, cartItem) => {
-            const { price, cartQuantity} = cartItem
-            const itemTotal = price * cartQuantity;
+      let { total, quantity } = state.cartItems.reduce(
+        (cartTotal, cartItem) => {
+          const { price, cartQuantity } = cartItem;
+          const itemTotal = price * cartQuantity;
 
-            cartTotal.total += itemTotal
-            cartTotal.quantity += cartQuantity
+          cartTotal.total += itemTotal;
+          cartTotal.quantity += cartQuantity;
 
-            return cartTotal
-        }, {
-            total: 0,
-            quantity: 0
-        })
+          return cartTotal;
+        },
+        {
+          total: 0,
+          quantity: 0,
+        }
+      );
 
-        state.cartTotalQuantity = quantity
-        state.cartTotalAmount = total
-    }
+      state.cartTotalQuantity = quantity;
+      state.cartTotalAmount = total;
+    },
   },
 });
 
-export const { addToCart, removeFromCart, decreaseCart, clearCart, getTotals } = cartSlice.actions;
+export const { addToCart, removeFromCart, decreaseCart, clearCart, getTotals } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;

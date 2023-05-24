@@ -1,22 +1,23 @@
-import React from "react";
 import styles from "../../styles/ProductListing.module.css";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { addToCart, getTotals } from "@/store/features/cartSlice";
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux";
 import { useEffect } from "react";
-
 import { BsCartPlus } from "react-icons/bs";
 
 function ProductListing({ products }) {
+  
+  // Get Cart
   const dispatch = useDispatch();
-
   const cart = useSelector((state) => state.cart);
 
+  // Update totals
   useEffect(() => {
     dispatch(getTotals());
   }, [cart, dispatch]);
 
+  // Add to cart function
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
   };

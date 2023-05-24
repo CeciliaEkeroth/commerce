@@ -1,29 +1,33 @@
-import React from 'react'
-import styles from '../../styles/Layout.module.css'
-import { BsFacebook, BsInstagram, BsTwitter, BsYoutube, BsPinterest } from 'react-icons/bs';
-
+import styles from "../../styles/Layout.module.css";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsTwitter,
+  BsYoutube,
+  BsPinterest,
+} from "react-icons/bs";
 
 function footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.footerInfo}>
         <div>
-          <p>Follow us</p>
+          <p>Följ oss</p>
           <ul className={styles.socialsIcons}>
             <li>
-              <BsFacebook/>
+              <BsFacebook />
             </li>
             <li>
-              <BsInstagram/>
+              <BsInstagram />
             </li>
             <li>
-              <BsTwitter/>
+              <BsTwitter />
             </li>
             <li>
-              <BsYoutube/>
+              <BsYoutube />
             </li>
             <li>
-              <BsPinterest/>
+              <BsPinterest />
             </li>
           </ul>
         </div>
@@ -37,7 +41,7 @@ function footer() {
         <div>
           <p>Kundtjänst</p>
           <ul>
-              <li>Kontakta oss</li>
+            <li>Kontakta oss</li>
             <li>Köpvillkor</li>
             <li>FAQ</li>
             <li>Frakt</li>
@@ -49,7 +53,7 @@ function footer() {
         <span>© COPYRIGHT CONSID COMMERCE</span>
       </div>
     </div>
-  )
+  );
 }
 
-export default footer
+export default footer;

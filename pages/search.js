@@ -1,9 +1,12 @@
 import Layout from "./components/layout";
 import ProductListing from "./components/ProductListing";
-import styles from '../styles/ProductListing.module.css'
+import styles from "../styles/ProductListing.module.css";
+import Head from "next/head";
 import { createClient } from "contentful";
 import { useRouter } from "next/router";
+import { BsEmojiFrown } from "react-icons/bs";
 
+// Get data
 export async function getStaticProps() {
   const client = createClient({
     space: "9dfuiiplny0l",
@@ -20,10 +23,11 @@ export async function getStaticProps() {
 }
 
 function search({ products }) {
+  // Get Search Term
   const router = useRouter();
-
   const searchTerm = router.query.query;
 
+  // Search through data
   const search = (data) => {
     return data.filter(
       (item) =>
@@ -32,19 +36,30 @@ function search({ products }) {
     );
   };
 
+  // Check if there were results
   const checkIfEmpty = () => {
     if (search(products).length > 0) {
       return <ProductListing products={search(products)} />;
     } else {
-      return <h2>No Results</h2>;
+      return (
+        <div className={styles.noResult}>
+          <h2>Inga Resultat</h2>
+          <BsEmojiFrown className={styles.noResultIcon} />
+        </div>
+      );
     }
   };
 
   return (
     <>
+      <Head>
+        <title>Consid Commerce - Search</title>
+      </Head>
       <Layout>
         <div>
-          <h1 className={styles.searchTitle}>Sök resultat för "{searchTerm}"</h1>
+          <h1 className={styles.searchTitle}>
+            Sök resultat för "{searchTerm}"
+          </h1>
           {checkIfEmpty()}
         </div>
       </Layout>

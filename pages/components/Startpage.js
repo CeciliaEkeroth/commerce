@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../../styles/Startpage.module.css";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,24 +6,27 @@ import { BsCartPlus } from "react-icons/bs";
 import { useEffect } from "react";
 
 function startpage({ startpage, products }) {
+  // Get cart
   const dispatch = useDispatch();
-
   const cart = useSelector((state) => state.cart);
 
+  // Update totals
   useEffect(() => {
     dispatch(getTotals());
   }, [cart, dispatch]);
 
+  // Add to cart function
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
   };
 
+  // Get recently added products
   const recentlyAdded = products.slice(0, 4);
 
   return (
     <div className={styles.startpage}>
       <div className={styles.welcome}>
-      <img
+        <img
           src={"https://" + startpage[0].fields.welcomeImage.fields.file.url}
           alt=""
         />
@@ -32,9 +34,9 @@ function startpage({ startpage, products }) {
           <h1>{startpage[0].fields.title}</h1>
           <p>{startpage[0].fields.content}</p>
           <Link href="/about">
-          <button>läs mer</button>
+            <button>läs mer</button>
           </Link>
-        </div> 
+        </div>
       </div>
       <div className={styles.new}>
         <h2>Nyligen tillagda produkter</h2>
@@ -67,9 +69,9 @@ function startpage({ startpage, products }) {
         </div>
       </div>
       <div className={styles.email}>
-        <h4>Sign up and get 10% off</h4>
-        <input type="email" placeholder="enter email adress" />
-        <button>Subscribe</button>
+        <h4>prenumerera och få 10% rabatt</h4>
+        <input type="email" placeholder="Skriv in din Email adress" />
+        <button>prenumerera</button>
       </div>
     </div>
   );
